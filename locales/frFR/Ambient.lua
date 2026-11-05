@@ -1,0 +1,16 @@
+-- SPDX-License-Identifier: CC-BY-SA-4.0
+local _, addon = ...
+addon.localeData.frFR.ambient = {
+    DWARF = { "Par mes ancêtres, la foi tient même sans heaume.", "La montagne est immobile. Pas la Lumière en moi.", "Qui connaît les profondeurs ne craint pas les ombres.", "*tapote son symbole sacré de ses jointures*", "*murmure une prière bourrue entre ses dents*" },
+    GNOME = { "J'ai mesuré le miracle. Il contredit toute équation.", "Un peu de guérison, un peu de recherche.", "Même les ténèbres ont des limites mesurables. En théorie.", "*ajuste ses lunettes devant un croquis lumineux*", "*note une observation décidément inexplicable*" },
+    HUMAN = { "Un serment ne vaut que par l'acte qui le suit.", "Je prie pour le retour, non pour la gloire.", "Là où règne la peur, nous nous devons du courage.", "*pose une main sur l'écusson de son cœur*", "*baisse brièvement la tête et reprend courage*" },
+    NIGHTELF = { "Sous les étoiles d'Élune, même le silence est prière.", "La lune offre sa lumière sans rien demander.", "Même la plus longue ombre suit les saisons.", "*dessine un croissant dans l'air*", "*écoute le vent dans les feuilles*" },
+    DRAENEI = { "Les naaru enseignent la patience. Ils oublient sa difficulté.", "J'ai vu tomber des mondes et gardé l'espoir.", "L'ombre n'est pas la fin. Elle indique où regarder.", "*effleure un cristal cousu à la robe*", "*incline la tête devant un carillon lointain*" },
+    ORC = { "L'honneur n'est pas la lame, mais aussi la main qui l'abaisse.", "Même les guerriers ont besoin qu'on voie leurs blessures.", "Les ancêtres chuchotent dans le noir et j'écoute.", "*frappe sa poitrine du poing en saluant les ancêtres*", "*se tient en silence, inflexible*" },
+    TROLL = { "Les loa ne rient pas toujours des mêmes choses que nous.", "Je connais une bénédiction, mais le loa veut une histoire.", "Une ombre a des dents. Mieux vaut ne pas demander.", "*secoue une petite bourse d'offrandes*", "*trace un signe étrange en dansant sur la poussière*" },
+    TAUREN = { "La Terre-Mère porte aussi ceux qui ont perdu leur chemin.", "La guérison pousse lentement comme l'herbe après le gel.", "L'ombre d'un nuage ne condamne pas le soleil.", "*effleure le sol de sa paume ouverte*", "*respire profondément en écoutant les plaines lointaines*" },
+    UNDEAD = { "Ma foi a survécu à mon pouls. Un bel exploit.", "Guérir est compliqué quand l'anatomie se contredit.", "Les ombres sont de vieilles connaissances. Trop bavardes.", "*vérifie ironiquement si son cœur bat encore*", "*redresse une étole effilochée avec gravité*" },
+    BLOODELF = { "La dignité, c'est garder son maintien dans le doute.", "Une bénédiction précise est un art.", "Les ombres révèlent ceux qui imitent la Lumière.", "*lisse un pli de sa robe élégante*", "*observe un reflet arcanique avec une froide attention*" },
+    HIGH_ELF = { "Même en exil, la Lumière trouve son chemin.", "Une main calme soigne mieux qu'un serment crié.", "Les souvenirs projettent de longues ombres.", "*soulève une modeste amulette gravée*", "*s'attarde un instant sur un vieux souvenir*" },
+    NEUTRAL = { "Parfois, écouter est le premier miracle.", "Je ne prie pas contre la peur, mais pour le courage.", "Le silence a étonnamment beaucoup de voix.", "*joint les mains et ferme un instant les yeux*", "*expire lentement et détend ses épaules*" },
+}
