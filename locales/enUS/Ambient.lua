@@ -1,0 +1,16 @@
+-- SPDX-License-Identifier: CC-BY-SA-4.0
+local _, addon = ...
+addon.localeData.enUS.ambient = {
+    DWARF = { "By my ancestors, faith holds even without a helm.", "The mountain is still. The Light in me is not.", "Those who know the deep need not fear shadows.", "*taps the sacred symbol with stout knuckles*", "*murmurs a rough prayer through clenched teeth*" },
+    GNOME = { "I measured the miracle. It defies every equation.", "A little healing, a little field research.", "Even darkness has measurable limits. Probably.", "*adjusts the goggles and studies a glowing sketch*", "*writes down a decidedly unexplainable observation*" },
+    HUMAN = { "An oath is only as strong as the deed that follows.", "I pray not for glory, but for a safe return.", "Where fear rules, we owe each other courage.", "*places a hand over the crest by the heart*", "*bows the head briefly and gathers courage*" },
+    NIGHTELF = { "Under Elune's stars, even silence is prayer.", "The moon gives light without asking a word.", "Even the longest shadow travels with the seasons.", "*traces a crescent in the air*", "*listens to the wind through the leaves*" },
+    DRAENEI = { "The naaru taught patience. They forgot to mention how hard it is.", "I have seen worlds fall and kept hope alive.", "A shadow is no ending. It reminds us where to look.", "*touches a crystal sewn into the robe*", "*bows reverently to a distant chime*" },
+    ORC = { "Honor is not only the blade, but the hand that lowers it.", "Even warriors need someone to tend their wounds.", "Ancestors whisper in darkness, and I listen.", "*presses a fist to the chest in salute to the ancestors*", "*stands quietly and unbowed*" },
+    TROLL = { "The loa seldom laugh at the same things we do.", "I know a blessing, but the loa wants a story.", "A shadow has teeth. Best not ask why.", "*shakes a small pouch of offerings*", "*dances a crooked symbol into the dust*" },
+    TAUREN = { "The Earth Mother bears those who have lost their way.", "Healing grows slowly, like grass after frost.", "A cloud's shadow is no judgment on the sun.", "*touches the earth with an open palm*", "*breathes deeply and listens to the distant plains*" },
+    UNDEAD = { "My faith outlived my pulse. Quite an achievement.", "Healing is tricky when your anatomy is contradictory.", "The shadows are old acquaintances. Dreadfully chatty.", "*checks with dry humor whether the heart still beats*", "*straightens a frayed stole with grim solemnity*" },
+    BLOODELF = { "Dignity means keeping your poise through doubt.", "A precise blessing is an art form.", "Shadows reveal those who merely imitate the Light.", "*smooths a fold in an elegant robe*", "*studies an arcane reflection with cool attention*" },
+    HIGH_ELF = { "Even in exile, the Light finds a way.", "A steady hand heals more than a shouted oath.", "Memories cast long shadows, even after centuries.", "*lifts a modest amulet engraved in silver*", "*lingers a breath with an ancient memory*" },
+    NEUTRAL = { "Sometimes listening is the first miracle.", "I do not pray against fear, but for courage.", "Silence has a surprising number of voices.", "*folds the hands and closes the eyes for a moment*", "*breathes out slowly and relaxes the shoulders*" },
+}
