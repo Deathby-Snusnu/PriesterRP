@@ -6,4 +6,4 @@
 - Priesterstimmen je Volk, optionales RPChatMod, Cooldown, Ausgabechance und Rollenspielkanäle.
 - Ambient wird durch Timer nur vorgemerkt und erst nach einer aktiven RP-Aktion ausgegeben.
 - Konfiguration über /prrp sowie RPControlCenter und RPTextStudio vorbereitet.
-- Erste Integration im RPAddOns-Entwicklungsrepository; separates PriesterRP-GitHub-Repository steht noch aus.
+- Eigenständiges GitHub-Repository eingerichtet; Integration in RPAddOns als Git-Submodul vorbereitet.

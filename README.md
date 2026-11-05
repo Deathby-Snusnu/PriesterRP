@@ -2,7 +2,7 @@
 Eigenständiges WoW-Forever-Rollenspiel-AddOn für Priesterinnen und Priester. Dieses Repository wird als eigenständige Quelle für das RPAddOns-Submodul geführt.
 
 ## Installation
-`addons/PriesterRP` nach `<WoW>/Interface/AddOns/PriesterRP` kopieren. Die Datei `PriesterRP.toc` muss unmittelbar im Ordner liegen. Die Interface-Angabe `16001` richtet sich an WoW Forever; die Ingame-Lauffähigkeit bleibt zu testen. KriegerRP und die anderen Klassen bleiben unabhängig.
+`PriesterRP` (dieses Repository) nach `<WoW>/Interface/AddOns/PriesterRP` kopieren. Die Datei `PriesterRP.toc` muss unmittelbar im Ordner liegen. Die Interface-Angabe `16001` richtet sich an WoW Forever; die Ingame-Lauffähigkeit bleibt zu testen. KriegerRP und die anderen Klassen bleiben unabhängig.
 
 ## Befehle
 - `/prrp help` oder `/priester help`: Anleitung
@@ -27,7 +27,11 @@ Die RP-Kommandos **wirken keine echten Zauber**. Für Makros `/cast <Zaubername>
 Die `locales/Init.lua` führt die 56 Keys aus Disziplin, Heilig und Schatten einschließlich klassenspezifischer Talente und Volksfähigkeiten. Die Einträge wurden mit dem Forever-Zauberbuch (Build 1.60.1.70790) abgeglichen: https://foreverchanges.pro/spellbook/priest . Die Verfügbarkeit eines bestimmten Talents oder Volkszaubers ist charakterabhängig. Texte bilden keine Cast-Erkennung.
 
 ## Entwicklung
-`python -m unittest discover -s addons/PriesterRP/tests -p "test_*.py"` und `python tools/check_consistency.py`. Ein manueller WoW-Clienttest der Slash-Befehle, Chat-Ausgabe, Ambient und SavedVariables ist erforderlich.
+`python -m unittest discover -s tests -p "test_*.py" -v` und `lua tests/test_runtime.lua` (Lua 5.1 oder 5.4). Ein manueller WoW-Clienttest der Slash-Befehle, Chat-Ausgabe, Ambient und SavedVariables ist erforderlich.
 
 ## Lizenz
 Lua-Code und Tests MPL-2.0 (`LICENSE-CODE`); kreative RP-Texte CC BY-SA 4.0 (`LICENSE-TEXTS`). Siehe `LICENSING.md` und `NOTICE`.
+
+## Repository-Einbindung
+
+Dieses Repository liegt als eigenständiges Git-Submodul unter `RPAddOns/addons/PriesterRP`. Zum Abrufen aus dem Sammelprojekt: `git submodule update --init --recursive`. Das eigenständige Repository enthält ausschließlich die Quellen von PriesterRP.
