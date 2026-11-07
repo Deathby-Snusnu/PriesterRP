@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: Priester RP
 ## Notes: Mehrsprachige Priestertexte für Licht, Disziplin und Schatten
-## Version: 0.1.0
+## Version: 0.1.1
 ## SavedVariablesPerCharacter: PriesterRP_CharacterDB
 ## OptionalDeps: RPChatMod
 

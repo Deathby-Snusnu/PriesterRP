@@ -1,4 +1,19 @@
-# PriesterRP 0.1.0
+# PriesterRP 0.1.1
+
+## Neue manuelle RP-Aktionen (0.1.1)
+
+6 ergänzende Textaktionen sind in DE/EN/FR verfügbar:
+- `BEDSIDE_PRAYER`
+- `SHRINE_VIGIL`
+- `CONFESSION`
+- `LAST_RITES`
+- `MEDITATION`
+- `SHADOW_REFLECTION`
+
+Die vorhandenen Fähigkeiten und Völkervarianten bleiben unverändert;
+die neuen Schlüssel sind ausdrücklich manuelle Rollenspielaktionen und
+werden nicht automatisch durch Spielereignisse ausgelöst.
+
 Eigenständiges WoW-Forever-Rollenspiel-AddOn für Priesterinnen und Priester. Dieses Repository wird als eigenständige Quelle für das RPAddOns-Submodul geführt.
 
 ## Installation
