@@ -34,8 +34,11 @@ class PriestCatalogTests(unittest.TestCase):
             with self.subTest(lang=lang):
                 text = (ROOT / "locales" / lang / "Texts.lua").read_text(encoding="utf-8")
                 keys = SPELLS.findall(text)
-                self.assertEqual(len(keys), 56)
-                self.assertEqual(set(keys), set(groups))
+                # 56 genuine spellbook keys plus six separate manual RP scenes.
+                self.assertEqual(len(keys), 62)
+                self.assertEqual(len(set(keys)), 62)
+                self.assertTrue(set(groups).issubset(set(keys)))
+                self.assertEqual(len(set(keys) - set(groups)), 6)
                 self.assertIn("ziel = {", text)
                 racial = (ROOT / "locales" / lang / "Racial.lua").read_text(encoding="utf-8")
                 self.assertIn("for key, school in pairs(addon.spellGroups)", racial)

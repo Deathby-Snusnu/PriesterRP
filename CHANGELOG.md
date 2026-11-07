@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 (Entwicklungsstand)
+
+- Die 56 zuvor vorhandenen Priester-Zauberschlüssel bleiben unverändert. Sechs ergänzende, ausdrücklich manuelle Rollenspielaktionen unterstützen Seelsorge, Andacht, Beistand, letzte Riten, Meditation und Schattenreflexion.
+- Alle Zusatzaktionen mit eigenen deutschen, englischen und französischen Ansagen und /me-Emotes, insgesamt 62 allgemeine RP-Schlüssel.
+- Sprachen- und Versionsprüfung ergänzt. Persönliche Texte und SavedVariables bleiben erhalten.
+
+
 ## 0.1.0 (Entwicklungsstand, 2026-11-05)
 - Vollständiger Grundkatalog von 56 Priester-Zauberschlüsseln gemäß Forever-Zauberbuch (Build 1.60.1.70790).
 - Eigene Klassen-RP-Texte in Deutsch, Englisch und Französisch mit /say und /me.

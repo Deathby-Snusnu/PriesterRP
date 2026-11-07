@@ -1,7 +1,8 @@
 -- SPDX-License-Identifier: MPL-2.0
 local _, addon = ...
+local manualFriendly = { BEDSIDE_PRAYER=true, CONFESSION=true, LAST_RITES=true }
 local function targetName(key)
-    local mode = addon.spellTargets[key]
+    local mode = manualFriendly[key] and "F" or addon.spellTargets[key]
     if not mode or type(UnitExists) ~= "function" or not UnitExists("target") or
         type(UnitName) ~= "function" then return nil end
     if mode == "A" then
