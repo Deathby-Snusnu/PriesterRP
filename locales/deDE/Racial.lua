@@ -70,7 +70,7 @@ addon.localeData.deDE.racial = pools
 -- Editorial expansion: fewer repeated gestures, clearer dwarven priest voice.
 for _, line in ipairs({
     "Ich habe schon Stollen abgestützt, die aussichtsloser waren. Haltet durch.",
-    "*legt beide Hände auf die Schultern des Verwundeten und spricht leise den Namen eines Ahnen.*",
+    "*legt beide Hände um das heilige Symbol und spricht leise den Namen eines Ahnen.*",
     "Ein Gebet ist kein Werkzeug. Doch manchmal hält es länger als ein eiserner Nagel.",
 }) do table.insert(voices.DWARF.H, line) end
 for _, line in ipairs({
