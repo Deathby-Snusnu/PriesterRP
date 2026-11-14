@@ -66,3 +66,18 @@ for race, groups in pairs(voices) do
     pools[race] = abilities
 end
 addon.localeData.deDE.racial = pools
+
+-- Editorial expansion: fewer repeated gestures, clearer dwarven priest voice.
+for _, line in ipairs({
+    "Ich habe schon Stollen abgestützt, die aussichtsloser waren. Haltet durch.",
+    "*legt beide Hände um das heilige Symbol und spricht leise den Namen eines Ahnen.*",
+    "Ein Gebet ist kein Werkzeug. Doch manchmal hält es länger als ein eiserner Nagel.",
+}) do table.insert(voices.DWARF.H, line) end
+for _, line in ipairs({
+    "Licht im Herzen, Staub auf den Stiefeln. So dienen wir den Lebenden.",
+    "*wischt die Hände am Mantel ab und richtet das schlichte Symbol an der Brust.*",
+}) do table.insert(voices.DWARF.D, line) end
+for _, line in ipairs({
+    "Unter den Bergen liegt tiefe Finsternis. Ich bin ihr schon einmal begegnet.",
+    "*verstummt, als wäre ein fernes Hämmern tief im Fels zu hören.*",
+}) do table.insert(voices.DWARF.S, line) end
