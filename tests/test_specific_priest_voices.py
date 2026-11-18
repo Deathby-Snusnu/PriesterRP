@@ -6,7 +6,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 LOCALES = ("deDE", "enUS", "frFR")
-RACES = ("DWARF", "GNOME", "UNDEAD")
+RACES = ("DWARF", "GNOME", "UNDEAD", "NIGHTELF", "TROLL", "DRAENEI")
 SPELLS = ("POWER_WORD_SHIELD", "RENEW", "SHADOW_WORD_PAIN", "RESURRECTION")
 ENTRY = re.compile(r'^        ([A-Z][A-Z0-9_]+) = \{ (.*?) \},$', re.M)
 QUOTED = re.compile(r'"(?:\\.|[^"\\])*"')
@@ -28,9 +28,12 @@ class SpecificPriestVoicesTests(unittest.TestCase):
                 self.assertLess(src.index("abilities[key] = groups[school]"),
                                 src.index("abilities[key] = variants"))
                 tail = src.split("local specificVoices = {", 1)[1]
-                self.assertEqual(len(re.findall(r'^    (?:DWARF|GNOME|UNDEAD) = \{$', tail, re.M)), 3)
+                self.assertEqual(
+                    len(re.findall(r'^    (?:DWARF|GNOME|UNDEAD|NIGHTELF|TROLL|DRAENEI) = \{$', tail, re.M)),
+                    len(RACES),
+                )
                 matches = ENTRY.findall(tail)
-                self.assertEqual(len(matches), 12)
+                self.assertEqual(len(matches), 24)
                 self.assertEqual({name for name, _ in matches}, set(SPELLS))
                 for race in RACES:
                     region = tail.split("    " + race + " = {", 1)[1].split("\n    },", 1)[0]
