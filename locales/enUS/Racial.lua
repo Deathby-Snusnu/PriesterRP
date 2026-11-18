@@ -88,6 +88,24 @@ local specificVoices = {
         SHADOW_WORD_PAIN = { "The shadow knows my name. I've taught it yours.", "*opens a hand and lets a dark thread rise into the air.*", "You call it a curse. I call it an old acquaintance.", "*listens briefly to a voice no one else can hear.*" },
         RESURRECTION = { "Coming back is possible. Believe me, I have experience.", "*kneels beside the fallen and studies the hands for a moment.*", "You can skip the grave this time.", "*raises the holy symbol and lets warm Light fall across the stillness.*" },
     },
+    NIGHTELF = {
+        POWER_WORD_SHIELD = { "Under Elune's gaze, you shall not stand unguarded.", "*traces a slender crescent before the companion.*", "Even the night has places where one may rest safely.", "*drapes the armour in a veil of silvery light.*" },
+        RENEW = { "Healing grows quietly, like new shoots after rain.", "*rests fingertips near the wound as gentle moonlight appears.*", "Take your time. Even the forest does not heal overnight.", "*breathes out slowly and watches a glimmering leaf drift away.*" },
+        SHADOW_WORD_PAIN = { "Night offers shelter. Yet it can also punish.", "*draws the shadow beneath the foe's feet upward.*", "Elune's light does not make me blind to darkness.", "*lowers the gaze as a narrow dark rune begins to glow.*" },
+        RESURRECTION = { "May the stars accompany you through many more nights.", "*kneels and gently rests a hand over the still heart.*", "Return. The forest has not forgotten your name.", "*draws a shining crescent above the fallen companion.*" },
+    },
+    TROLL = {
+        POWER_WORD_SHIELD = { "The loa are watching. I'm just giving them a hand.", "*shakes a small pouch of offerings and draws a warding sign.*", "Hey, while my blessing holds, they won't get you so easily!", "*taps the amulet twice as though checking its fit.*" },
+        RENEW = { "Easy, friend. The loa don't care for hurried work.", "*rubs herbs between the fingers and whispers a blessing.*", "The body knows how to heal. It just needs reminding.", "*rests a hand on the bandage and waits for a warm glow.*" },
+        SHADOW_WORD_PAIN = { "Your shadow asked me a question. You won't like the answer.", "*draws a crooked sign in the dust and chuckles softly.*", "Some loa whisper. Others bite.", "*turns a small amulet until its dark face points outward.*" },
+        RESURRECTION = { "Hey, get up! Your loa hasn't called for you yet.", "*taps the ground beside the fallen companion and waits.*", "The spirits can carry on their feast without you a while longer.", "*raises a plain amulet as warm light falls upon the body.*" },
+    },
+    DRAENEI = {
+        POWER_WORD_SHIELD = { "The naaru remind us that protection is also a promise.", "*touches a crystal whose light settles around the companion.*", "We have lost so many worlds. I will not give up on you.", "*turns a palm toward the companion and raises a clear glow.*" },
+        RENEW = { "What has been broken can sometimes slowly become whole again.", "*lets soft light flow through the fingers across the wound.*", "Hope is not a miracle on command. It needs tending.", "*kneels beside the injured companion and speaks a quiet prayer.*" },
+        SHADOW_WORD_PAIN = { "I have seen great darkness. I know where a whisper can lead.", "*holds the crystal tightly as a dark thread crosses the hand.*", "Do not underestimate shadow. I have seen its price.", "*lowers the voice until only a barely audible word remains.*" },
+        RESURRECTION = { "Another homecoming is possible. Listen to my voice.", "*holds the crystal in both hands and kneels beside the fallen.*", "We have endured enough farewells. Not this one.", "*lets light travel slowly over the still body.*" },
+    },
 }
 for race, spells in pairs(specificVoices) do
     local abilities = pools[race]
