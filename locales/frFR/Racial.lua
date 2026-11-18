@@ -106,6 +106,36 @@ local specificVoices = {
         SHADOW_WORD_PAIN = { "J'ai vu de grandes ténèbres. Je sais où mène un murmure.", "*serre son cristal tandis qu'un fil sombre traverse sa main.*", "Ne sous-estimez pas l'ombre. J'en connais le prix.", "*baisse la voix jusqu'à ne laisser qu'un mot presque inaudible.*" },
         RESURRECTION = { "Un nouveau retour est possible. Écoutez ma voix.", "*serre son cristal à deux mains et s'agenouille près du défunt.*", "Nous avons connu assez d'adieux. Pas celui-ci.", "*laisse la lumière parcourir lentement le corps immobile.*" },
     },
+    HUMAN = {
+        POWER_WORD_SHIELD = { "Un serment ne protège personne si nous n'agissons pas.", "*trace d'une main exercée un signe protecteur devant son compagnon.*", "Tant que je tiendrai, vous ne serez pas seul.", "*touche son blason et fait naître une douce lumière.*" },
+        RENEW = { "Un pas après l'autre. Nous vous remettrons sur pied.", "*vérifie le bandage et y fait glisser une douce lumière.*", "Guérir exige de la patience, même au cœur du combat.", "*murmure une courte prière et retire doucement la main.*" },
+        SHADOW_WORD_PAIN = { "Un mot peut blesser. Celui-ci, je l'ai choisi avec soin.", "*baisse la voix et trace un mince trait sombre dans l'air.*", "Je connais les dangers de cette voie. Je ne la prends pas à la légère.", "*ferme un instant les yeux avant que l'ombre ne s'élève.*" },
+        RESURRECTION = { "Vous avez fait une promesse. Revenez la tenir.", "*s'agenouille et pose le symbole sacré près de la main immobile.*", "Le chemin du retour existe encore. Écoutez ma voix.", "*prononce le nom de son compagnon dans une douce lumière.*" },
+    },
+    ORC = {
+        POWER_WORD_SHIELD = { "Protégez celui qui combat à vos côtés. C'est le devoir du clan.", "*frappe sa poitrine du poing et entoure son allié d'une protection lumineuse.*", "Cette protection vaut mieux que de vaines paroles.", "*ancre ses pieds au sol et garde la main protectrice levée.*" },
+        RENEW = { "Même les plus forts ont besoin de repos avant de reprendre le combat.", "*bande une plaie de mains fermes et invoque une lumière guérisseuse.*", "Portez votre cicatrice avec honneur. Mais laissez-la guérir d'abord.", "*hoche la tête et tient la main au-dessus du bandage.*" },
+        SHADOW_WORD_PAIN = { "Les ancêtres connaissent des mots qui font taire même les guerriers.", "*baisse la tête et laisse monter une note sombre de sa gorge.*", "Je n'appelle pas les ombres par plaisir.", "*ouvre le poing et laisse échapper un mince fil d'ombre.*" },
+        RESURRECTION = { "Le clan vous compte encore parmi les siens. Revenez.", "*s'agenouille près du défunt et touche son front avec respect.*", "Votre place près du feu est toujours libre. Reprenez-la.", "*confie un nom aux ancêtres et attend dans une douce lumière.*" },
+    },
+    TAUREN = {
+        POWER_WORD_SHIELD = { "La Terre-Mère vous porte. Je ne fais qu'écarter la tempête.", "*pose une main sur la terre et lève l'autre pour protéger son compagnon.*", "Les racines tiennent bon quand le vent se lève.", "*dessine calmement un cercle lumineux au-dessus du sol.*" },
+        RENEW = { "L'herbe repousse après le gel. Vos forces reviendront aussi.", "*effleure la plaie et respire au rythme d'une prière silencieuse.*", "La guérison ne se presse pas. Elle trouve pourtant son chemin.", "*tend la paume jusqu'à ce qu'une douce lueur apparaisse.*" },
+        SHADOW_WORD_PAIN = { "Même sous le soleil, chaque guerrier projette une ombre.", "*plante fermement un sabot tandis que l'obscurité monte du sol.*", "Je connais le poids des mots murmurés.", "*baisse les cornes et chuchote un sombre vers.*" },
+        RESURRECTION = { "La Terre-Mère ne vous a pas encore appelé hors de notre cercle.", "*s'agenouille et effleure le sol du bout des doigts.*", "Levez-vous. Les plaines attendent vos pas.", "*lève lentement les mains tandis qu'une douce lumière entoure le défunt.*" },
+    },
+    BLOODELF = {
+        POWER_WORD_SHIELD = { "Une barrière impeccable. Tout est dans l'exécution.", "*trace une fine rune dorée avec une précision parfaite.*", "L'élégance ne suffit pas à protéger. Ce sort, si.", "*lisse sa manche tandis qu'une protection lumineuse se referme.*" },
+        RENEW = { "Guérir, c'est aussi maîtriser la juste mesure.", "*dessine un arc paisible de deux doigts au-dessus de la plaie.*", "L'éclat revient, et avec lui votre force.", "*observe de fins fils de lumière refermer la blessure.*" },
+        SHADOW_WORD_PAIN = { "L'ombre révèle la moindre imprudence. Vous ne trouverez pas la mienne.", "*aligne une rune sombre d'un geste presque imperceptible.*", "Le pouvoir exige de la discipline. Même le plus obscur.", "*fait tournoyer un mince fil d'ombre entre deux doigts.*" },
+        RESURRECTION = { "Le monde n'est pas prêt à se passer de vous.", "*pose une amulette finement gravée sur la poitrine du défunt.*", "Revenez. Une telle vie ne doit pas rester inachevée.", "*ferme les yeux et garde les mains immobiles dans une lueur dorée.*" },
+    },
+    HIGH_ELF = {
+        POWER_WORD_SHIELD = { "Cette protection porte la patience de bien des hivers passés.", "*touche une simple amulette et fait naître une lueur argentée.*", "Certaines promesses survivent aux royaumes. Celle-ci est pour vous.", "*trace un signe ancien d'une main calme et sûre.*" },
+        RENEW = { "Une longue route enseigne la patience, même pour guérir.", "*fait glisser un mince filet de lumière sur le bandage.*", "Toute cicatrice n'a pas besoin de disparaître pour laisser place à l'espoir.", "*immobilise ses doigts au-dessus de la blessure et écoute le souffle.*" },
+        SHADOW_WORD_PAIN = { "Les souvenirs aussi projettent des ombres. Certaines se guident.", "*referme la main sur son amulette tandis que l'obscurité s'amasse.*", "J'ai appris à ne pas prononcer légèrement les mots sombres.", "*trace lentement une ligne obscure dans l'air.*" },
+        RESURRECTION = { "Tous les adieux ne sont pas définitifs.", "*s'agenouille et tient l'amulette au-dessus du cœur immobile.*", "Revenez. Il reste des chants que vous n'avez pas entendus.", "*récite une prière ancienne tandis qu'une lueur argentée touche le défunt.*" },
+    },
 }
 for race, spells in pairs(specificVoices) do
     local abilities = pools[race]
