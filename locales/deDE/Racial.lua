@@ -81,3 +81,36 @@ for _, line in ipairs({
     "Unter den Bergen liegt tiefe Finsternis. Ich bin ihr schon einmal begegnet.",
     "*verstummt, als wäre ein fernes Hämmern tief im Fels zu hören.*",
 }) do table.insert(voices.DWARF.S, line) end
+
+-- Spell-specific racial voices; school-based pools remain the fallback.
+-- These entries are deliberately target-neutral and use *...* for /me.
+local specificVoices = {
+    DWARF = {
+        POWER_WORD_SHIELD = { "Hinter diesem Schutz steht ein Zwerg. Das ist mehr wert als bloßer Stein.", "*zieht mit dem Daumen ein leuchtendes Schutzzeichen auf die Schildkante.*", "Der nächste Schlag gehört mir, nicht Euch.", "*stellt sich fest hin und lässt einen goldenen Schimmer über den Gefährten gleiten.*" },
+        RENEW = { "Eine Wunde heilt nicht schneller, nur weil man sie anschreit.", "*wechselt den Verband und murmelt dabei einen alten Segensspruch.*", "Ganz ruhig. Selbst ein Berg wächst nicht an einem Tag.", "*legt die schwielige Hand vorsichtig auf die Schulter des Verletzten.*" },
+        SHADOW_WORD_PAIN = { "Unter dem Berg gibt es Dunkelheit, die keine Fackel vertreibt.", "*reibt eine schwarze Staubspur zwischen Daumen und Zeigefinger.*", "Manche Worte wiegen schwerer als Erz.", "*spricht ein einziges raues Wort, während der eigene Schatten tiefer wird.*" },
+        RESURRECTION = { "Ihr habt hier noch Freunde. Die Ahnen müssen warten.", "*kniet nieder und legt das heilige Symbol neben die reglose Hand.*", "Kommt zurück. Die Geschichte ist noch nicht zu Ende erzählt.", "*spricht die Namen der Ahnen, einen nach dem anderen, in das stille Licht.*" },
+    },
+    GNOME = {
+        POWER_WORD_SHIELD = { "Schutzfeld stabil. Dass es aus Glauben besteht, ist eine technische Einzelheit.", "*zeichnet rasch einen Kreis und misst seine Leuchtkraft mit einer winzigen Linse.*", "Keine Sorge, die Konstruktion hält. Zumindest laut meiner Rechnung.", "*tippt auf ein kleines Messgerät, während eine schimmernde Hülle entsteht.*" },
+        RENEW = { "Das ist keine Sofortreparatur. Das ist sorgfältige Wartung am lebenden Objekt.", "*beobachtet konzentriert, wie das Licht die Wundränder schließt.*", "Eine kleine Dosis Hoffnung, gleichmäßig verteilt.", "*zeichnet mehrere winzige Heilzeichen wie Punkte in einem Diagramm.*" },
+        SHADOW_WORD_PAIN = { "Interessant. Der Schatten reagiert sogar auf schlechte Gedanken.", "*schreibt hastig ein Warnzeichen auf den Rand seiner Notizen.*", "Ich sollte diese Formel nicht laut vor dem Frühstück testen.", "*richtet die Brille und lässt ein dunkles Flimmern von der Fingerspitze gleiten.*" },
+        RESURRECTION = { "Ein Neustart ist möglich. Diesmal bitte ohne unerwartetes Herunterfahren.", "*legt zwei Finger an die Stirn des Gefallenen und zählt leise mit.*", "Zurück ins Leben. Ich kann die Methode später erklären.", "*hält den Atem an, als der erste Lichtfunke die Stille durchbricht.*" },
+    },
+    UNDEAD = {
+        POWER_WORD_SHIELD = { "Ich habe keinen Herzschlag mehr. Trotzdem schütze ich die Euren.", "*zieht mit knochigen Fingern einen hellen Kreis vor den Gefährten.*", "Das Licht und ich haben eine komplizierte Beziehung. Es hilft trotzdem.", "*betrachtet die goldene Schutzhaut mit einem trockenen Lächeln.*" },
+        RENEW = { "Die Lebenden heilen so bereitwillig. Faszinierend.", "*legt zwei kühle Finger an die Wunde und beobachtet die Regeneration.*", "Behaltet Euren Puls. Er steht Euch ausgezeichnet.", "*zieht die ausgefranste Stola zurecht und spricht einen überraschend sanften Segen.*" },
+        SHADOW_WORD_PAIN = { "Der Schatten kennt meinen Namen. Ich habe ihm Euren beigebracht.", "*öffnet die Hand, aus der ein dunkler Faden in die Luft steigt.*", "Ihr nennt es einen Fluch. Ich nenne es alte Bekanntschaft.", "*lauscht einen Moment einer Stimme, die sonst niemand hört.*" },
+        RESURRECTION = { "Zurückkommen ist möglich. Glaubt mir, ich spreche aus Erfahrung.", "*kniet neben dem Gefallenen und sieht einen Moment auf die eigenen Hände.*", "Diesmal könnt Ihr Euch das Grab ersparen.", "*richtet das heilige Symbol auf und lässt warmes Licht über die Stille fallen.*" },
+    },
+}
+for race, spells in pairs(specificVoices) do
+    local abilities = pools[race]
+    if abilities then
+        for key, variants in pairs(spells) do
+            if addon.spellGroups[key] then
+                abilities[key] = variants
+            end
+        end
+    end
+end
