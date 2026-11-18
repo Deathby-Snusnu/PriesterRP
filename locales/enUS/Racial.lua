@@ -106,6 +106,36 @@ local specificVoices = {
         SHADOW_WORD_PAIN = { "I have seen great darkness. I know where a whisper can lead.", "*holds the crystal tightly as a dark thread crosses the hand.*", "Do not underestimate shadow. I have seen its price.", "*lowers the voice until only a barely audible word remains.*" },
         RESURRECTION = { "Another homecoming is possible. Listen to my voice.", "*holds the crystal in both hands and kneels beside the fallen.*", "We have endured enough farewells. Not this one.", "*lets light travel slowly over the still body.*" },
     },
+    HUMAN = {
+        POWER_WORD_SHIELD = { "An oath protects no one unless we act upon it.", "*draws a crisp warding sigil before the companion with a practised hand.*", "As long as I stand, you shall not stand alone.", "*touches the crest and calls forth a warm glow.*" },
+        RENEW = { "One step at a time. We'll get you back on your feet.", "*checks the bandage and passes a steady glow of Light over it.*", "Healing takes patience, even in the middle of battle.", "*speaks a brief prayer and gently withdraws the hand.*" },
+        SHADOW_WORD_PAIN = { "A word can wound. I have chosen this one carefully.", "*lowers the voice and traces a thin dark line in the air.*", "I know the danger of this path. I do not tread it lightly.", "*closes the eyes for a moment before the shadow rises.*" },
+        RESURRECTION = { "You made a promise. Come back and keep it.", "*kneels and places the holy symbol beside the resting hand.*", "There is still a way home. Listen to my voice.", "*speaks the fallen companion's name into a gentle Light.*" },
+    },
+    ORC = {
+        POWER_WORD_SHIELD = { "Protect the one who fights beside you. That is the clan's duty.", "*strikes a fist to the chest and wraps an ally in a glowing ward.*", "This ward is stronger than a boast. Trust it.", "*plants both feet and keeps the warding hand raised.*" },
+        RENEW = { "Even the strongest need rest before they fight again.", "*binds a wound with steady hands and calls down healing Light.*", "Bear the scar with honour. But let it heal first.", "*nods to the injured companion and holds a hand above the bandage.*" },
+        SHADOW_WORD_PAIN = { "The ancestors know words that silence even warriors.", "*bows the head and lets a dark note rise from the throat.*", "I do not call the shadows for amusement.", "*opens a fist as a thin strand of shadow emerges.*" },
+        RESURRECTION = { "The clan still counts you among its own. Return.", "*kneels beside the fallen and touches the brow with respect.*", "Your place at the fire is still open. Come and claim it.", "*speaks a name to the ancestors and waits in warm Light.*" },
+    },
+    TAUREN = {
+        POWER_WORD_SHIELD = { "The Earth Mother carries you. I only turn the storm aside.", "*places one hand upon the earth and lifts the other to ward the companion.*", "Roots hold fast when the winds rise.", "*draws a bright circle above the ground with a calm gesture.*" },
+        RENEW = { "Grass returns after frost. So will your strength.", "*touches the wound gently and breathes to the rhythm of a quiet prayer.*", "Healing does not hurry. It still finds its way.", "*holds an open palm until a gentle glow appears.*" },
+        SHADOW_WORD_PAIN = { "Even beneath the sun, every warrior casts a shadow.", "*plants a hoof firmly as darkness rises from the ground.*", "I know the weight of quiet words.", "*lowers the horns and whispers a dark verse.*" },
+        RESURRECTION = { "The Earth Mother has not yet called you from our circle.", "*kneels low and touches the earth with the fingertips.*", "Rise. The plains await your footsteps.", "*slowly raises both hands as warm Light surrounds the fallen.*" },
+    },
+    BLOODELF = {
+        POWER_WORD_SHIELD = { "A flawless barrier. The difference lies in the execution.", "*draws a slender golden rune with perfect precision.*", "Elegance alone offers no protection. This spell does.", "*smooths a sleeve as a glowing ward seals into place.*" },
+        RENEW = { "Healing is also the art of proper measure.", "*guides two fingers in a calm arc above the wound.*", "The radiance returns, and your strength with it.", "*watches fine strands of Light close the injury.*" },
+        SHADOW_WORD_PAIN = { "Shadow exposes every careless move. You will not find mine.", "*aligns a dark rune with an almost imperceptible movement.*", "Power demands discipline. Even dark power.", "*spins a thin strand of shadow between two fingers.*" },
+        RESURRECTION = { "The world is not ready to do without you.", "*places a finely engraved amulet upon the fallen companion's chest.*", "Return. A life such as yours should not remain unfinished.", "*closes the eyes and holds both hands still in golden Light.*" },
+    },
+    HIGH_ELF = {
+        POWER_WORD_SHIELD = { "This ward carries the patience of many winters past.", "*touches a modest amulet and raises a silvery glow.*", "Some promises outlive kingdoms. This one is yours.", "*draws an ancient sign with a calm, steady hand.*" },
+        RENEW = { "A long road teaches patience, even in healing.", "*guides a narrow stream of Light across the bandage.*", "Not every scar must vanish for hope to remain.", "*holds the fingers still above the injury and listens to the breathing.*" },
+        SHADOW_WORD_PAIN = { "Memories cast shadows too. Some can be guided.", "*closes a hand around the amulet as darkness gathers.*", "I have learned not to speak dark words lightly.", "*slowly traces a dark line through the air.*" },
+        RESURRECTION = { "Not every farewell must be the final one.", "*kneels and holds the amulet above the still heart.*", "Return. There are songs you have yet to hear.", "*speaks an ancient prayer as silvery Light touches the fallen.*" },
+    },
 }
 for race, spells in pairs(specificVoices) do
     local abilities = pools[race]
