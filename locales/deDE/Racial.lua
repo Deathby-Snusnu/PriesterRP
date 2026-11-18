@@ -103,6 +103,24 @@ local specificVoices = {
         SHADOW_WORD_PAIN = { "Der Schatten kennt meinen Namen. Ich habe ihm Euren beigebracht.", "*öffnet die Hand, aus der ein dunkler Faden in die Luft steigt.*", "Ihr nennt es einen Fluch. Ich nenne es alte Bekanntschaft.", "*lauscht einen Moment einer Stimme, die sonst niemand hört.*" },
         RESURRECTION = { "Zurückkommen ist möglich. Glaubt mir, ich spreche aus Erfahrung.", "*kniet neben dem Gefallenen und sieht einen Moment auf die eigenen Hände.*", "Diesmal könnt Ihr Euch das Grab ersparen.", "*richtet das heilige Symbol auf und lässt warmes Licht über die Stille fallen.*" },
     },
+    NIGHTELF = {
+        POWER_WORD_SHIELD = { "Unter Elunes Blick bleibt Ihr nicht ungeschützt.", "*zeichnet eine feine Mondsichel vor den Gefährten.*", "Selbst die Nacht hat Orte, an denen man sicher ruht.", "*lässt silbernes Licht wie einen Schleier über der Rüstung liegen.*" },
+        RENEW = { "Heilung wächst still, wie neue Triebe nach dem Regen.", "*legt die Fingerspitzen auf die Wunde, während ein sanftes Mondlicht aufscheint.*", "Nehmt Euch Zeit. Auch der Wald heilt nicht über Nacht.", "*atmet langsam aus und folgt mit dem Blick einem schimmernden Blatt.*" },
+        SHADOW_WORD_PAIN = { "Die Nacht birgt Schutz. Doch sie kann auch strafen.", "*lässt den Schatten unter den Füßen des Feindes aufsteigen.*", "Elunes Licht macht mich nicht blind für die Dunkelheit.", "*senkt den Blick, während eine schmale dunkle Rune erglimmt.*" },
+        RESURRECTION = { "Die Sterne sollen Euch noch viele Nächte begleiten.", "*kniet nieder und legt eine Hand behutsam über das reglose Herz.*", "Kehrt zurück. Der Wald hat Euren Namen nicht vergessen.", "*zieht eine leuchtende Mondsichel über dem Gefallenen nach.*" },
+    },
+    TROLL = {
+        POWER_WORD_SHIELD = { "Die Loa passen auf. Ich helf ein bisschen nach.", "*schüttelt einen kleinen Beutel mit Opfergaben und zieht ein Schutzzeichen.*", "He, solange mein Segen hält, kriegt Euch keiner so leicht!", "*klopft zweimal gegen das Amulett, als prüfe er seinen Sitz.*" },
+        RENEW = { "Ruhig, Freund. Die Loa mögen keine hastige Arbeit.", "*reibt Kräuter zwischen den Fingern und spricht einen leisen Segen.*", "Der Körper weiß, wie er heilt. Man muss ihn nur erinnern.", "*legt die Hand auf den Verband und wartet auf den warmen Schimmer.*" },
+        SHADOW_WORD_PAIN = { "Euer Schatten hat mich was gefragt. Die Antwort wird Euch nicht gefallen.", "*zeichnet ein krummes Zeichen in den Staub und lacht leise.*", "Manche Loa flüstern. Andere beißen.", "*dreht ein kleines Amulett um, bis seine dunkle Seite nach vorn zeigt.*" },
+        RESURRECTION = { "He, aufstehen! Dein Loa hat dich noch nicht gerufen.", "*klopft behutsam auf den Boden neben dem Gefallenen und wartet.*", "Die Geister können noch ein Weilchen ohne Euch feiern.", "*hebt ein schlichtes Amulett, während warmes Licht auf den Körper fällt.*" },
+    },
+    DRAENEI = {
+        POWER_WORD_SHIELD = { "Die Naaru erinnern uns daran, dass Schutz auch ein Versprechen ist.", "*berührt einen Kristall, dessen Licht sich um den Gefährten legt.*", "So viele Welten haben wir verloren. Euch gebe ich nicht auf.", "*richtet die Handfläche auf den Gefährten und lässt einen klaren Schein aufsteigen.*" },
+        RENEW = { "Was zerbrochen ist, kann manchmal langsam wieder ganz werden.", "*lässt ein sanftes Licht durch die Finger über die Wunde gleiten.*", "Hoffnung ist kein Wunder auf Befehl. Sie braucht Pflege.", "*kniet neben dem Verletzten und spricht ein ruhiges Gebet.*" },
+        SHADOW_WORD_PAIN = { "Ich habe große Finsternis gesehen. Ich weiß, wohin ein Flüstern führen kann.", "*hält den Kristall fest, während ein dunkler Faden über die Hand zieht.*", "Unterschätzt den Schatten nicht. Ich habe seinen Preis erlebt.", "*senkt die Stimme, bis nur noch ein kaum hörbares Wort bleibt.*" },
+        RESURRECTION = { "Eine weitere Heimkehr ist möglich. Hört auf meine Stimme.", "*fasst den Kristall mit beiden Händen und kniet am Gefallenen nieder.*", "Wir haben genug Abschiede erlebt. Nicht diesen.", "*lässt das Licht langsam über den stillen Körper wandern.*" },
+    },
 }
 for race, spells in pairs(specificVoices) do
     local abilities = pools[race]
