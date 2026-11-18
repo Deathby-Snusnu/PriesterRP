@@ -66,3 +66,36 @@ for race, groups in pairs(voices) do
     pools[race] = abilities
 end
 addon.localeData.frFR.racial = pools
+
+-- Spell-specific racial voices; school-based pools remain the fallback.
+-- These entries are deliberately target-neutral and use *...* for /me.
+local specificVoices = {
+    DWARF = {
+        POWER_WORD_SHIELD = { "Un nain veille derrière cette protection. Cela vaut plus que la pierre.", "*trace du pouce une rune lumineuse sur le bord du bouclier.*", "Le prochain coup sera pour moi, pas pour vous.", "*campe solidement ses pieds tandis qu'une lueur dorée enveloppe son compagnon.*" },
+        RENEW = { "Une plaie ne guérit pas plus vite si on lui crie dessus.", "*change le bandage en murmurant une ancienne bénédiction.*", "Doucement. Même une montagne ne grandit pas en un jour.", "*pose doucement sa main calleuse sur l'épaule du blessé.*" },
+        SHADOW_WORD_PAIN = { "Sous la montagne, il est des ténèbres qu'aucune torche ne chasse.", "*frotte une trace de poussière noire entre le pouce et l'index.*", "Certains mots pèsent plus lourd que le minerai.", "*prononce un mot rauque tandis que son ombre s'assombrit.*" },
+        RESURRECTION = { "Vous avez encore des amis ici. Les ancêtres devront attendre.", "*s'agenouille et pose son symbole sacré près de la main immobile.*", "Revenez. Votre histoire n'est pas terminée.", "*prononce les noms des ancêtres, un à un, dans la Lumière silencieuse.*" },
+    },
+    GNOME = {
+        POWER_WORD_SHIELD = { "Champ protecteur stable. Qu'il soit fait de foi est un détail technique.", "*dessine un cercle et mesure son éclat avec une minuscule lentille.*", "Ne craignez rien, la structure tient. D'après mes calculs.", "*tapote un appareil de mesure tandis qu'une barrière apparaît.*" },
+        RENEW = { "Ce n'est pas une réparation express, mais un entretien minutieux du vivant.", "*observe attentivement la Lumière refermer les bords d'une plaie.*", "Une petite dose d'espoir, répartie avec précision.", "*dessine de minuscules signes de soin comme les points d'un graphique.*" },
+        SHADOW_WORD_PAIN = { "Intéressant. L'ombre réagit même aux mauvaises pensées.", "*griffonne à la hâte un avertissement dans la marge de ses notes.*", "Je ne devrais pas tester cette formule à voix haute avant le déjeuner.", "*ajuste ses lunettes et laisse filer une ombre depuis le bout d'un doigt.*" },
+        RESURRECTION = { "Un redémarrage est possible. Évitons cette fois l'arrêt imprévu.", "*pose deux doigts sur le front du défunt et compte à voix basse.*", "Retour à la vie. J'expliquerai la méthode plus tard.", "*retient son souffle quand une étincelle de Lumière perce le silence.*" },
+    },
+    UNDEAD = {
+        POWER_WORD_SHIELD = { "Mon cœur ne bat plus. Je protégerai ceux qui battent encore.", "*dessine un cercle lumineux devant son compagnon de ses doigts osseux.*", "La Lumière et moi avons une relation compliquée. Elle aide quand même.", "*observe la protection dorée avec un sourire sec.*" },
+        RENEW = { "Les vivants guérissent si volontiers. Fascinant.", "*pose deux doigts glacés près d'une plaie et la regarde se refermer.*", "Gardez votre pouls. Il vous va très bien.", "*redresse son étole effilochée et murmure une bénédiction étonnamment douce.*" },
+        SHADOW_WORD_PAIN = { "L'ombre connaît mon nom. Je lui ai appris le vôtre.", "*ouvre la main et laisse monter un fil d'obscurité.*", "Vous appelez cela une malédiction. Moi, une vieille connaissance.", "*écoute un instant une voix que nul autre n'entend.*" },
+        RESURRECTION = { "Revenir est possible. Croyez-moi, je parle d'expérience.", "*s'agenouille près du défunt et contemple un instant ses propres mains.*", "Cette fois, vous pouvez éviter la tombe.", "*soulève le symbole sacré et répand une douce Lumière sur le silence.*" },
+    },
+}
+for race, spells in pairs(specificVoices) do
+    local abilities = pools[race]
+    if abilities then
+        for key, variants in pairs(spells) do
+            if addon.spellGroups[key] then
+                abilities[key] = variants
+            end
+        end
+    end
+end
