@@ -88,6 +88,24 @@ local specificVoices = {
         SHADOW_WORD_PAIN = { "L'ombre connaît mon nom. Je lui ai appris le vôtre.", "*ouvre la main et laisse monter un fil d'obscurité.*", "Vous appelez cela une malédiction. Moi, une vieille connaissance.", "*écoute un instant une voix que nul autre n'entend.*" },
         RESURRECTION = { "Revenir est possible. Croyez-moi, je parle d'expérience.", "*s'agenouille près du défunt et contemple un instant ses propres mains.*", "Cette fois, vous pouvez éviter la tombe.", "*soulève le symbole sacré et répand une douce Lumière sur le silence.*" },
     },
+    NIGHTELF = {
+        POWER_WORD_SHIELD = { "Sous le regard d'Élune, vous ne resterez pas sans protection.", "*trace un fin croissant devant son compagnon.*", "Même la nuit possède des refuges où se reposer.", "*dépose sur l'armure un voile de lumière argentée.*" },
+        RENEW = { "La guérison pousse en silence, comme les jeunes pousses après la pluie.", "*approche les doigts de la plaie tandis qu'une douce clarté lunaire paraît.*", "Prenez votre temps. Même la forêt ne guérit pas en une nuit.", "*expire lentement en suivant une feuille lumineuse du regard.*" },
+        SHADOW_WORD_PAIN = { "La nuit offre un refuge. Mais elle sait aussi punir.", "*fait monter l'ombre sous les pieds de l'ennemi.*", "La lumière d'Élune ne m'aveugle pas face aux ténèbres.", "*baisse le regard tandis qu'une fine rune sombre s'illumine.*" },
+        RESURRECTION = { "Que les étoiles vous accompagnent encore bien des nuits.", "*s'agenouille et pose doucement une main au-dessus du cœur immobile.*", "Revenez. La forêt n'a pas oublié votre nom.", "*dessine un croissant lumineux au-dessus de son compagnon tombé.*" },
+    },
+    TROLL = {
+        POWER_WORD_SHIELD = { "Les Loa veillent. Je leur donne juste un coup de main.", "*secoue une bourse d'offrandes et trace un signe protecteur.*", "Hé, tant que ma bénédiction tient, ils ne t'auront pas facilement !", "*tapote deux fois son amulette pour vérifier qu'elle tient bien.*" },
+        RENEW = { "Doucement, camarade. Les Loa n'aiment pas le travail bâclé.", "*frotte des herbes entre ses doigts et murmure une bénédiction.*", "Le corps sait guérir. Il faut seulement le lui rappeler.", "*pose la main sur le bandage et attend une lueur chaleureuse.*" },
+        SHADOW_WORD_PAIN = { "Ton ombre m'a posé une question. La réponse ne va pas te plaire.", "*dessine un signe tordu dans la poussière et ricane doucement.*", "Certains Loa murmurent. D'autres mordent.", "*retourne une amulette pour en montrer la face sombre.*" },
+        RESURRECTION = { "Hé, debout ! Ton Loa ne t'a pas encore appelé.", "*tapote le sol près de son compagnon tombé et attend.*", "Les esprits peuvent continuer la fête sans toi un moment.", "*lève une simple amulette tandis qu'une douce lumière éclaire le corps.*" },
+    },
+    DRAENEI = {
+        POWER_WORD_SHIELD = { "Les naaru nous rappellent que protéger, c'est aussi promettre.", "*effleure un cristal dont la lumière enveloppe son compagnon.*", "Nous avons perdu tant de mondes. Je ne vous abandonnerai pas.", "*tend la paume vers son compagnon et fait naître une clarté limpide.*" },
+        RENEW = { "Ce qui fut brisé peut parfois lentement se réparer.", "*laisse glisser une douce lumière de ses doigts sur la plaie.*", "L'espoir n'est pas un miracle sur commande. Il se cultive.", "*s'agenouille près du blessé et récite une prière paisible.*" },
+        SHADOW_WORD_PAIN = { "J'ai vu de grandes ténèbres. Je sais où mène un murmure.", "*serre son cristal tandis qu'un fil sombre traverse sa main.*", "Ne sous-estimez pas l'ombre. J'en connais le prix.", "*baisse la voix jusqu'à ne laisser qu'un mot presque inaudible.*" },
+        RESURRECTION = { "Un nouveau retour est possible. Écoutez ma voix.", "*serre son cristal à deux mains et s'agenouille près du défunt.*", "Nous avons connu assez d'adieux. Pas celui-ci.", "*laisse la lumière parcourir lentement le corps immobile.*" },
+    },
 }
 for race, spells in pairs(specificVoices) do
     local abilities = pools[race]
