@@ -121,6 +121,36 @@ local specificVoices = {
         SHADOW_WORD_PAIN = { "Ich habe große Finsternis gesehen. Ich weiß, wohin ein Flüstern führen kann.", "*hält den Kristall fest, während ein dunkler Faden über die Hand zieht.*", "Unterschätzt den Schatten nicht. Ich habe seinen Preis erlebt.", "*senkt die Stimme, bis nur noch ein kaum hörbares Wort bleibt.*" },
         RESURRECTION = { "Eine weitere Heimkehr ist möglich. Hört auf meine Stimme.", "*fasst den Kristall mit beiden Händen und kniet am Gefallenen nieder.*", "Wir haben genug Abschiede erlebt. Nicht diesen.", "*lässt das Licht langsam über den stillen Körper wandern.*" },
     },
+    HUMAN = {
+        POWER_WORD_SHIELD = { "Ein Eid schützt niemanden, wenn wir nicht danach handeln.", "*zeichnet mit geübter Hand ein klares Schutzsiegel vor dem Gefährten.*", "Solange ich stehe, sollt Ihr nicht allein stehen.", "*legt die Hand an das Wappen und ruft ein warmes Leuchten hervor.*" },
+        RENEW = { "Ein Schritt nach dem anderen. Wir bringen Euch wieder auf die Beine.", "*prüft den Verband und lässt einen gleichmäßigen Lichtschein darüber gleiten.*", "Heilung verlangt Geduld, selbst mitten in der Schlacht.", "*spricht ein kurzes Gebet und zieht die Hand behutsam zurück.*" },
+        SHADOW_WORD_PAIN = { "Ein Wort kann verletzen. Dieses hier habe ich wohlüberlegt gewählt.", "*senkt die Stimme und zieht eine schmale dunkle Linie in die Luft.*", "Ich kenne die Gefahr dieses Pfades. Ich gehe ihn nicht leichtfertig.", "*schließt kurz die Augen, bevor der Schatten aufsteigt.*" },
+        RESURRECTION = { "Ihr habt ein Versprechen gegeben. Kommt zurück und löst es ein.", "*kniet nieder und legt das heilige Symbol neben die ruhende Hand.*", "Die Heimkehr ist noch möglich. Hört meine Stimme.", "*spricht den Namen des Gefallenen in ein sanftes Licht hinein.*" },
+    },
+    ORC = {
+        POWER_WORD_SHIELD = { "Schützt den, der neben Euch kämpft. Das ist die Pflicht des Clans.", "*schlägt die Faust an die Brust und legt einen leuchtenden Schutz um den Verbündeten.*", "Dieser Schutz ist stärker als eine Prahlerei. Verlasst Euch darauf.", "*stemmt die Füße in den Boden und hält die schützende Hand erhoben.*" },
+        RENEW = { "Auch die Stärksten brauchen Ruhe, um wieder zu kämpfen.", "*bindet eine Wunde mit ruhigen, kräftigen Händen und ruft heilendes Licht.*", "Tragt die Narbe mit Ehre. Aber lasst sie erst heilen.", "*nickt dem Verwundeten zu und hält eine Hand über den Verband.*" },
+        SHADOW_WORD_PAIN = { "Die Ahnen kennen Worte, vor denen selbst Krieger schweigen.", "*neigt den Kopf und lässt einen dunklen Klang aus der Kehle steigen.*", "Ich rufe die Schatten nicht zum Vergnügen.", "*öffnet die Faust, während ein schmaler Schattenstreifen hervortritt.*" },
+        RESURRECTION = { "Der Clan zählt Euch noch zu den Seinen. Kehrt zurück.", "*kniet neben dem Gefallenen und berührt respektvoll dessen Stirn.*", "Euer Platz am Feuer ist noch frei. Nehmt ihn wieder ein.", "*spricht einen Namen zu den Ahnen und wartet im warmen Licht.*" },
+    },
+    TAUREN = {
+        POWER_WORD_SHIELD = { "Die Erdenmutter trägt Euch. Ich halte nur den Sturm fern.", "*legt eine Hand an die Erde und hebt die andere zum Schutz des Gefährten.*", "Wurzeln halten fest, wenn die Winde toben.", "*zeichnet mit ruhiger Geste einen hellen Kreis über dem Boden.*" },
+        RENEW = { "Gras wächst nach dem Frost. Auch Eure Kraft wird zurückkehren.", "*berührt die Wunde sanft und atmet im Rhythmus eines stillen Gebets.*", "Die Heilung eilt nicht. Sie findet dennoch ihren Weg.", "*hält die Handfläche offen, bis ein milder Schein entsteht.*" },
+        SHADOW_WORD_PAIN = { "Selbst unter der Sonne wirft jeder Krieger einen Schatten.", "*legt den Huf fest auf die Erde, während die Dunkelheit aufsteigt.*", "Ich kenne das Gewicht stiller Worte.", "*senkt die Hörner und flüstert einen dunklen Vers.*" },
+        RESURRECTION = { "Die Erdenmutter hat Euch noch nicht aus unserem Kreis gerufen.", "*kniet tief nieder und berührt mit den Fingerspitzen den Boden.*", "Steht auf. Die Ebenen warten auf Eure Schritte.", "*hebt die Hände langsam, während warmes Licht den Gefallenen umgibt.*" },
+    },
+    BLOODELF = {
+        POWER_WORD_SHIELD = { "Eine makellose Barriere. Der Unterschied liegt in der Ausführung.", "*zieht eine schlanke, goldene Rune mit vollkommener Präzision.*", "Eleganz schützt nicht von allein. Dieser Zauber schon.", "*glättet den Ärmel, während sich ein leuchtender Schutz schließt.*" },
+        RENEW = { "Heilung ist auch eine Kunst der richtigen Dosierung.", "*führt zwei Finger in einem ruhigen Bogen über die Wunde.*", "Der Glanz kehrt zurück. Und mit ihm Eure Stärke.", "*betrachtet aufmerksam, wie feines Licht die Verletzung schließt.*" },
+        SHADOW_WORD_PAIN = { "Der Schatten verrät jede Unachtsamkeit. Meinen Fehler findet Ihr nicht.", "*ordnet eine dunkle Rune mit kaum sichtbarer Fingerbewegung.*", "Macht verlangt Disziplin. Auch die finstere.", "*lässt einen dünnen Schattenfaden zwischen zwei Fingern kreisen.*" },
+        RESURRECTION = { "Die Welt ist noch nicht bereit, auf Euch zu verzichten.", "*legt ein fein graviertes Amulett an die Brust des Gefallenen.*", "Kehrt zurück. Ein solches Leben darf nicht unvollendet bleiben.", "*schließt die Augen und hält die Hände unbewegt im goldenen Schein.*" },
+    },
+    HIGH_ELF = {
+        POWER_WORD_SHIELD = { "Dieser Schutz trägt die Geduld vieler vergangener Winter.", "*berührt ein schlichtes Amulett und lässt silbriges Licht aufsteigen.*", "Manche Versprechen überdauern Königreiche. Dieses gilt Euch.", "*zeichnet ein altes Zeichen mit ruhiger, sicherer Hand.*" },
+        RENEW = { "Ein langer Weg lehrt Geduld. Auch beim Heilen.", "*lässt einen schmalen Lichtstrom über den Verband fließen.*", "Nicht jede Narbe muss verschwinden, damit Hoffnung bleibt.", "*hält die Finger still über der Verletzung und lauscht dem Atem.*" },
+        SHADOW_WORD_PAIN = { "Auch Erinnerungen werfen Schatten. Manche lassen sich lenken.", "*schließt die Hand um das Amulett, während sich Dunkelheit sammelt.*", "Ich habe gelernt, finstere Worte nicht leichtfertig auszusprechen.", "*zieht langsam eine dunkle Linie durch die Luft.*" },
+        RESURRECTION = { "Nicht jedes Abschiedswort muss das letzte sein.", "*kniet nieder und hält das Amulett über das reglose Herz.*", "Kommt zurück. Es gibt noch Lieder, die Ihr nicht gehört habt.", "*spricht ein altes Gebet, während silbriges Licht den Gefallenen berührt.*" },
+    },
 }
 for race, spells in pairs(specificVoices) do
     local abilities = pools[race]
