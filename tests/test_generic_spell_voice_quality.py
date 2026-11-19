@@ -1,0 +1,69 @@
+"""Regression checks for the first editorial cleanup of generic priest spell texts."""
+import json
+import re
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+LOCALES = ("deDE", "enUS", "frFR")
+SPELLS = (
+    "POWER_WORD_SHIELD", "DISPEL_MAGIC", "INNER_FOCUS", "POWER_INFUSION",
+    "RENEW", "RESURRECTION", "FLASH_HEAL", "HOLY_FIRE",
+    "SHADOW_WORD_PAIN", "MIND_BLAST", "PSYCHIC_SCREAM", "SHADOWFORM",
+)
+TARGETED = {
+    "POWER_WORD_SHIELD", "POWER_INFUSION", "RENEW", "RESURRECTION",
+    "FLASH_HEAL", "HOLY_FIRE", "SHADOW_WORD_PAIN", "MIND_BLAST",
+}
+ROW = re.compile(
+    r'^    ([A-Z][A-Z0-9_]+) = \{ gruppe = \{ (.*?) \}'
+    r'(?:, ziel = \{ (.*?) \})?, \},$', re.M
+)
+STRING = re.compile(r'"(?:\\.|[^"\\])*"')
+
+
+def strings(data):
+    return [json.loads(m.group()) for m in STRING.finditer(data)]
+
+
+class GenericPriestSpellVoicesTests(unittest.TestCase):
+    def test_distinct_speech_emotes_and_target_format(self):
+        for locale in LOCALES:
+            with self.subTest(locale=locale):
+                path = ROOT / "locales" / locale / "Texts.lua"
+                rows = {
+                    key: (strings(gruppe), strings(ziel) if ziel else None)
+                    for key, gruppe, ziel in ROW.findall(path.read_text(encoding="utf-8"))
+                }
+                self.assertEqual(len(rows), 62)
+                group_second, emotes = [], []
+                for key in SPELLS:
+                    self.assertIn(key, rows)
+                    gruppe, ziel = rows[key]
+                    self.assertEqual(len(gruppe), 4, key)
+                    self.assertEqual(len(set(gruppe)), 4, key)
+                    self.assertEqual(sum(s.startswith("*") for s in gruppe), 2, key)
+                    group_second.append(gruppe[1])
+                    emotes.extend(gruppe[2:])
+                    if key in TARGETED:
+                        self.assertIsNotNone(ziel, key)
+                        self.assertEqual(len(ziel), 4, key)
+                        self.assertEqual(ziel[2:], gruppe[2:], key)
+                        self.assertEqual(ziel[1].count("%s"), 1, key)
+                        self.assertNotIn("%s", gruppe[1], key)
+                    else:
+                        self.assertIsNone(ziel, key)
+                    for line in gruppe + (ziel or []):
+                        self.assertTrue(line.strip(), key)
+                        self.assertLessEqual(len(line.encode("utf-8")), 255, key)
+                        self.assertNotIn("|", line, key)
+                        self.assertEqual(line.startswith("*"), line.endswith("*"), key)
+                        if line.startswith("*"):
+                            self.assertEqual(line.count("*"), 2, key)
+                            self.assertNotIn("%s", line, key)
+                self.assertEqual(len(set(group_second)), len(SPELLS))
+                self.assertEqual(len(set(emotes)), 2 * len(SPELLS))
+
+
+if __name__ == "__main__":
+    unittest.main()
