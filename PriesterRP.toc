@@ -19,6 +19,7 @@ locales\frFR\Ambient.lua
 core\Database.lua
 core\Cooldown.lua
 core\Ambient.lua
+music\CreativeVoices.lua
 music\MusicRP.lua
 core\Text.lua
 core\Chat.lua
