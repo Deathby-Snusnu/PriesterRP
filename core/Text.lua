@@ -25,6 +25,8 @@ function addon.BuildText(key)
         (addon.localeData.deDE.texts and addon.localeData.deDE.texts[key])
     if not entry then return nil end
     local target = targetName(key)
+    local music = addon.ChooseMusicText and addon.ChooseMusicText(key)
+    if music then return music end
     local pool = target and entry.ziel or entry.gruppe
     if type(pool) ~= "table" or #pool == 0 then pool = entry.gruppe end
     local _, race = UnitRace("player")
