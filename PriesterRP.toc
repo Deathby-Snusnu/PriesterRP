@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: Priester RP
 ## Notes: Mehrsprachige Priestertexte für Licht, Disziplin und Schatten
-## Version: 0.1.1
+## Version: 0.1.2
 ## SavedVariablesPerCharacter: PriesterRP_CharacterDB
 ## OptionalDeps: RPChatMod
 
@@ -19,6 +19,7 @@ locales\frFR\Ambient.lua
 core\Database.lua
 core\Cooldown.lua
 core\Ambient.lua
+music\MusicRP.lua
 core\Text.lua
 core\Chat.lua
 core\Commands.lua
