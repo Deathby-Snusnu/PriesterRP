@@ -141,12 +141,32 @@ end
 
 local function help()
     notify("/prrp help | status | debug | list [racial|all]")
+    notify("/prrp music on|off|status|chance 0-100")
     notify("/prrp <SCHLUESSEL> (z.B. POWER_WORD_SHIELD), /prrp ambient [test|on|off|status]")
     notify("/prrp chance 0-100 | cooldown 0-3600 | racial 0-100")
     notify("/prrp ambient chance 0-100 | combat on/off | interval MIN MAX")
     notify("/prrp language deDE|enUS|frFR")
     notify("/prrp channel SAY|YELL|AUTO|PARTY|RAID|INSTANCE_CHAT")
     notify("*...* sind /me-Emotes. Passive Talenttexte nur per /prrp, nicht per /cast.")
+end
+
+local function HandleMusic(argument)
+    local action, value = (argument or ""):match("^%s*(%S*)%s*(.-)%s*$")
+    action = (action or ""):lower()
+    if action == "on" or action == "off" then
+        addon.db.musicEnabled = action == "on"
+    elseif action == "chance" then
+        local number = tonumber(value)
+        if not number or number ~= math.floor(number) or number < 0 or number > 100 then
+            notify("Benutzung: /prrp music chance 0-100")
+            return
+        end
+        addon.db.musicChance = number
+    elseif action ~= "" and action ~= "status" then
+        notify("Benutzung: /prrp music on|off|status|chance 0-100")
+        return
+    end
+    notify("MusicRP: " .. (addon.db.musicEnabled and "an" or "aus") .. " | Chance " .. tostring(addon.db.musicChance) .. "%")
 end
 
 SlashCmdList["PRIESTERRP"] = function(message)
@@ -158,6 +178,7 @@ SlashCmdList["PRIESTERRP"] = function(message)
     elseif command == "status" then status()
     elseif command == "debug" then debug()
     elseif command == "list" then listKeys(arg:lower())
+    elseif command == "music" then HandleMusic(arg)
     elseif command == "ambient" then ambient(arg)
     elseif command == "language" then
         local lang = languages[arg:lower()]
