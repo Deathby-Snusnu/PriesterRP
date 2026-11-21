@@ -170,4 +170,29 @@ env.SlashCmdList.PRIESTERRP("ambient on")
 assert(addon.db.ambientEnabled)
 env.SlashCmdList.PRIESTERRP("ambient off")
 assert(not addon.db.ambientEnabled)
+
+-- Opt-in MusicRP, version 0.1.2 and all translated music pools.
+assert(addon.db.musicEnabled==false and addon.db.musicChance==15)
+local musicCount=0
+for key, ref in pairs(addon.musicRPReferences) do
+    musicCount=musicCount+1
+    assert(type(ref.artist)=="string" and type(ref.song)=="string")
+    for _, lang in ipairs({"deDE","enUS","frFR"}) do
+        local lines=addon.musicRP[lang][key]
+        assert(type(lines)=="table" and #lines==2)
+        assert(#lines[1]<=255 and #lines[2]<=255)
+        assert(lines[2]:sub(1,1)=="*" and lines[2]:sub(-1)=="*")
+    end
+end
+assert(musicCount==6)
+env.SlashCmdList.PRIESTERRP("music on")
+env.SlashCmdList.PRIESTERRP("music chance 100")
+assert(addon.db.musicEnabled and addon.db.musicChance==100)
+local choice=addon.ChooseMusicText("RENEW")
+assert(choice==addon.musicRP.deDE.RENEW[1] or choice==addon.musicRP.deDE.RENEW[2])
+env.SlashCmdList.PRIESTERRP("music chance 101")
+assert(addon.db.musicChance==100)
+env.SlashCmdList.PRIESTERRP("music off")
+assert(addon.ChooseMusicText("RENEW")==nil)
+
 print("PriesterRP runtime smoke checks passed.")
