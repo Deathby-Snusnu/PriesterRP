@@ -179,9 +179,11 @@ for key, ref in pairs(addon.musicRPReferences) do
     assert(type(ref.artist)=="string" and type(ref.song)=="string")
     for _, lang in ipairs({"deDE","enUS","frFR"}) do
         local lines=addon.musicRP[lang][key]
-        assert(type(lines)=="table" and #lines==2)
-        assert(#lines[1]<=255 and #lines[2]<=255)
-        assert(lines[2]:sub(1,1)=="*" and lines[2]:sub(-1)=="*")
+        assert(type(lines)=="table" and #lines>=2 and #lines%2==0)
+        for i, line in ipairs(lines) do
+            assert(#line<=255)
+            if i%2==0 then assert(line:sub(1,1)=="*" and line:sub(-1)=="*") end
+        end
     end
 end
 assert(musicCount==6)
@@ -189,7 +191,11 @@ env.SlashCmdList.PRIESTERRP("music on")
 env.SlashCmdList.PRIESTERRP("music chance 100")
 assert(addon.db.musicEnabled and addon.db.musicChance==100)
 local choice=addon.ChooseMusicText("RENEW")
-assert(choice==addon.musicRP.deDE.RENEW[1] or choice==addon.musicRP.deDE.RENEW[2])
+local choiceKnown=false
+for _, line in ipairs(addon.musicRP.deDE.RENEW) do
+    if choice==line then choiceKnown=true end
+end
+assert(choiceKnown)
 env.SlashCmdList.PRIESTERRP("music chance 101")
 assert(addon.db.musicChance==100)
 env.SlashCmdList.PRIESTERRP("music off")
