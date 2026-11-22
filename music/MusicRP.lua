@@ -28,6 +28,20 @@ addon.musicRP.deDE.MEDITATION = { "Die Zeit lehrt uns nicht von selbst. Wir müs
 addon.musicRP.enUS.MEDITATION = { "Time does not teach us by itself. We must also listen.", "*rests both hands on the knees and breathes slowly.*" }
 addon.musicRP.frFR.MEDITATION = { "Le temps ne nous instruit pas seul. Il faut aussi l'écouter.", "*pose les mains sur les genoux et respire lentement.*" }
 
+-- Extra original spoken lines and actions for existing music-inspired keys.
+table.insert(addon.musicRP.deDE.RENEW, "Die Hoffnung verspricht keine Ewigkeit. Sie schenkt uns den nächsten Schritt.")
+table.insert(addon.musicRP.deDE.RENEW, "*legt zwei Finger auf die Wunde und wartet auf den ersten warmen Schimmer.*")
+table.insert(addon.musicRP.enUS.RENEW, "Hope promises no eternity. It grants the next step.")
+table.insert(addon.musicRP.enUS.RENEW, "*rests two fingers by the wound and waits for a warm glow.*")
+table.insert(addon.musicRP.frFR.RENEW, "L'espoir ne promet pas l'éternité. Il offre le prochain pas.")
+table.insert(addon.musicRP.frFR.RENEW, "*pose deux doigts près de la blessure et attend une douce lueur.*")
+table.insert(addon.musicRP.deDE.SHADOW_WORD_PAIN, "Nicht jeder Gedanke sollte ausgesprochen werden. Dieser schon gar nicht.")
+table.insert(addon.musicRP.deDE.SHADOW_WORD_PAIN, "*flüstert in die Dunkelheit, bis die Schatten antworten.*")
+table.insert(addon.musicRP.enUS.SHADOW_WORD_PAIN, "Not every thought should be spoken. Least of all this one.")
+table.insert(addon.musicRP.enUS.SHADOW_WORD_PAIN, "*whispers into the dark until the shadows answer.*")
+table.insert(addon.musicRP.frFR.SHADOW_WORD_PAIN, "Toutes les pensées ne doivent pas être dites. Surtout pas celle-ci.")
+table.insert(addon.musicRP.frFR.SHADOW_WORD_PAIN, "*murmure dans l'ombre jusqu'à ce qu'elle réponde.*")
+
 function addon.ChooseMusicText(key)
     local db = addon.db
     if not db or not db.musicEnabled or (db.musicChance or 0) <= 0 then return nil end
