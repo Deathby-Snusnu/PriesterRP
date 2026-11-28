@@ -1,3 +1,15 @@
+## 0.1.3: Mehrsprachige Zauber- und Ambient-Stimmen (Entwurf)
+
+In der nächsten Entwicklungsstufe der RP-AddOn-Familie ergänzt `locales/<Sprache>/VoicesExpansion.lua` die bestehenden Textpools **additiv** in `deDE`, `enUS` und `frFR`. Die neue Datei wird erst nach `Texts.lua` und `Ambient.lua` geladen, damit die Tabellen bereits existieren. Eigene Textänderungen bleiben erhalten.
+
+- Fünf Kernfähigkeiten: `RESURRECTION`, `RENEW`, `POWER_WORD_SHIELD`, `SHADOW_WORD_PAIN`, `FADE`. Je Fähigkeit kommen eine gesprochene Variante und eine beschreibende `*...*`-Geste pro Sprache hinzu.
+- Drei charakteristische Volk-Ambient-Pools: Zwerge, Nachtelfen, Untote. Je Volk eine neue gesprochene Variante und ein `*...*`-Emote pro Sprache.
+- Insgesamt 16 neue Originalzeilen pro Sprache beziehungsweise 48 über die drei Sprachfassungen.
+- Keine neuen Event-Listener, keine automatischen Buff-Danksagungen, keine geschützten WoW-UI-Funktionen. Die bestehende Entscheidung über `/say` und `/me` bleibt beim jeweiligen Klassen-AddOn.
+- Test: `tests/test_voices_expansion_20261128.py` prüft Schlüssel, Laden, Rassen, Sprachparität und Textlängen. Vor Ingame-Veröffentlichung CI und praktische Tests ausführen.
+
+**Versionspflege:** Die TOC ist für diese Entwicklung auf `0.1.3` gestellt. Dies ist noch kein Release; RPTextStudio und RPAddOns müssen beim späteren Merge/Update die neuen Dateien und diese Version berücksichtigen.
+
 ## MusicRP 0.1.2 und kreative Textüberarbeitung
 
 Sechs optional abrufbare Songmotive und vier zusätzliche allgemeine Fähigkeiten-Pools mit selbst verfassten `/say`- und `/me`-Varianten in **deDE**, **enUS**, **frFR**. Songtitel sind nur interne Inspirations-Metadaten, keine reproduzierten Lyrics. Persönliche Texte, vorhandene Rassen- und Standardpools werden nicht überschrieben.
